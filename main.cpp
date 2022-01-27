@@ -1,82 +1,85 @@
 ﻿#include <iostream>
 #include <conio.h>
 #include "character.h"
-#include "warrior.h"
-#include "mage.h"
-#include "archer.h"
+#include "Warrior.h"
+#include "Mage.h"
+#include "Archer.h"
 
 int main()
 {
     int select = 0;
     int getch();
 
-    //for player
-    //character* player = new warrior(" ");
+    // for player
+    // character* player = new Warrior(" ");
+    Warrior Warrior1("Marek");
+    Mage Mage1("Antonio");
+    Archer Archer1("HughAnus");
 
-    warrior warrior1("Marek");
-    mage mage1("Antonio");
-    archer archer1("HughAnus");
-
-    //for bot
-    warrior warrior2("Norbert");
-    mage mage2("Bob");
-    archer archer2("PabloTheSecond");
+    // for bot
+    Warrior Warrior2("Norbert");
+    Mage Mage2("Bob");
+    Archer Archer2("PabloTheSecond");
 
     cout << "Choose ur character" << endl;
     cout << "1. Warrior" << endl;
     cout << "2. Archer" << endl;
-    cout << "3. Mage" << endl << endl;
+    cout << "3. Mage" << endl
+         << endl;
     select = getch();
 
-    //character selection
+    // character selection
     switch (select)
     {
     case '1':
     {
-        warrior1.introduce();
+        Warrior *player = new Warrior("Antoni");
+        player->introduce();
         break;
     }
     case '2':
     {
-        archer1.introduce();
+        Archer *player = new Archer("Waldek");
         break;
     }
     case '3':
     {
-        mage1.introduce();
+        Mage *player = new Mage("Marek");
         break;
     }
     }
-    //choose enemy
+
+    // choose enemy
     int selectEnemy;
     cout << "Wybierz przeciwnika: " << endl;
     cout << "1. Warrior" << endl;
     cout << "2. Archer" << endl;
-    cout << "3. Mage" << endl << endl;
+    cout << "3. Mage" << endl
+         << endl;
     selectEnemy = getch();
 
-    //encounter
+    // encounter
 
     switch (selectEnemy)
     {
     case '1':
     {
-        warrior2.introduce();
+        Warrior2.introduce();
         break;
     }
     case '2':
     {
-        archer2.introduce();
+        Archer2.introduce();
         break;
     }
     case '3':
     {
-        mage2.introduce();
+        Mage2.introduce();
         break;
     }
     }
 
-    //fight
+    // fight
 
     /*while (character.isAlive())
     {
