@@ -4,7 +4,7 @@ using namespace std;
 class character
 {
 public:
-	//parameters
+	// parameters
 	string name;
 	string specialization;
 
@@ -21,8 +21,15 @@ public:
 		this->mana = 0;
 	}
 
-	//methods
-	void introduce();
-	void whatIsMyHp();
+	// methods
 	void isAlive();
+	void introduce()
+	{
+		cout << "Mam na imie " << this->name << " a moja klasa to " << this->specialization << endl
+			 << endl;
+	}
+	void whatIsMyHp()
+	{
+		cout << "Mam " << this->hp << " HP" << endl;
+	}
 };
